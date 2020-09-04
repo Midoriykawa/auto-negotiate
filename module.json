@@ -7,6 +7,6 @@
 		"niceName": "auto-negotiate",
 		"guiName": "auto negotiate"
 	},
-	"servers": ["https://raw.githubusercontent.com/Midoriykawa/auto-negotiate/master/"],
+	"servers": ["https://raw.githubusercontent.com/Midoriykawa/auto-negotiate/soft/"],
 	"supportUrl": "https://github.com/Midoriykawa/auto-negotiate/issues"
 }
