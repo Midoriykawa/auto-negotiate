@@ -151,7 +151,7 @@ module.exports = function AutoNegotiate(dispatch) {
 	})
 
 	if(UNATTENDED_MANUAL_NEGOTIATE)
-		dispatch.hook('C_REQUEST_CONTRACT', 1, event => {
+		dispatch.hook('C_REQUEST_CONTRACT', 3, event => {
 			if(event.type == 35) {
 				let deal = recentDeals[event.data.readUInt32LE(0) + '-' + event.data.readUInt32LE(4)]
 
@@ -198,7 +198,7 @@ module.exports = function AutoNegotiate(dispatch) {
 			data.writeUInt32LE(currentDeal.playerId, 0)
 			data.writeUInt32LE(currentDeal.listing, 4)
 
-			dispatch.toServer('C_REQUEST_CONTRACT', 1, {
+			dispatch.toServer('C_REQUEST_CONTRACT', 3, {
 				type: 35,
 				unk2: 0,
 				unk3: 0,
