@@ -1,13 +1,12 @@
 {
 	"disableAutoUpdate": false,
-	"name": "auto-nego",
+	"name": "auto-negotiate",
 	"author": "Midoriykawa",
 	"description": "Automatically accepts or declines Trade Broker negotiations.",
 	"options": {
-		"niceName": "Auto-Nego",
-		"guiName": "Auto Nego"
+		"niceName": "auto-negotiate",
+		"guiName": "auto negotiate"
 	},
-	"conflicts": ["auto-negotiate", "auto-negotiate-master", "negotiator", "negotiator-master"],
-	"servers": ["https://raw.githubusercontent.com/Midoriykawa/auto-nego/master/"],
-	"supportUrl": "https://github.com/Midoriykawa/auto-nego/issues"
+	"servers": ["https://raw.githubusercontent.com/Midoriykawa/auto-negotiate/master/"],
+	"supportUrl": "https://github.com/Midoriykawa/auto-negotiate/issues"
 }
