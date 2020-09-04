@@ -3,7 +3,7 @@ Automatically accepts or declines Trade Broker negotiations.
 Settings can be configured by editing `index.js` (after disabing auto-update in module.json file)
 
 
-Changes of this version: test test test test
+Changes of this version: test test test test   11
 
 new command `nretry` - retries last suggested deal 
 
