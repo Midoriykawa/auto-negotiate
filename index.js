@@ -94,7 +94,7 @@ module.exports = function AutoNegotiate(dispatch) {
 		}
 	})
 
-	dispatch.hook('S_REQUEST_CONTRACT', 2, event => {
+	dispatch.hook('S_REQUEST_CONTRACT', 1, event => {
 		if(currentDeal && (event.type == TYPE_NEGOTIATION_PENDING || event.type == TYPE_NEGOTIATION)) {
 			currentContract = event
 			setEndTimeout()
@@ -103,9 +103,9 @@ module.exports = function AutoNegotiate(dispatch) {
 	})
 
 	dispatch.hook('S_REPLY_REQUEST_CONTRACT', 1, replyOrAccept)
-	dispatch.hook('S_ACCEPT_CONTRACT', 2, replyOrAccept)
+	dispatch.hook('S_ACCEPT_CONTRACT', 1, replyOrAccept)
 
-	dispatch.hook('S_REJECT_CONTRACT', 2, event => {
+	dispatch.hook('S_REJECT_CONTRACT', 1, event => {
 		if(currentDeal && (event.type == TYPE_NEGOTIATION_PENDING || event.type == TYPE_NEGOTIATION)) {
 			command.message(currentDeal.name + ' aborted negotiation.')
 
@@ -122,7 +122,7 @@ module.exports = function AutoNegotiate(dispatch) {
 		}
 	})
 
-	dispatch.hook('S_CANCEL_CONTRACT', 2, event => {
+	dispatch.hook('S_CANCEL_CONTRACT', 1, event => {
 		if(currentDeal && (event.type == TYPE_NEGOTIATION_PENDING || event.type == TYPE_NEGOTIATION)) {
 			currentContract = null
 			endDeal()
@@ -151,7 +151,7 @@ module.exports = function AutoNegotiate(dispatch) {
 	})
 
 	if(UNATTENDED_MANUAL_NEGOTIATE)
-		dispatch.hook('C_REQUEST_CONTRACT', 3, event => {
+		dispatch.hook('C_REQUEST_CONTRACT', 1, event => {
 			if(event.type == 35) {
 				let deal = recentDeals[event.data.readUInt32LE(0) + '-' + event.data.readUInt32LE(4)]
 
