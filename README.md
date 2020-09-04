@@ -5,7 +5,7 @@ Settings can be configured by editing `index.js` (after disabing auto-update in 
 
 Changes of this version:
 
-new command `nretry` - retries last suggested deal  test
+new command `nretry` - retries last suggested deal  11111111111111
 
 new variables: `AUTO_REJECT_TROLLS` and `AUTO_REJECT_CHANCE`
 
