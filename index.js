@@ -198,7 +198,7 @@ module.exports = function AutoNegotiate(dispatch) {
 			data.writeUInt32LE(currentDeal.playerId, 0)
 			data.writeUInt32LE(currentDeal.listing, 4)
 
-			dispatch.toServer('C_REQUEST_CONTRACT', 3, {
+			dispatch.toServer('C_REQUEST_CONTRACT', 1, {
 				type: 35,
 				unk2: 0,
 				unk3: 0,
